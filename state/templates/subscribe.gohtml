@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Subscribe for Updates</title>
+    </head>
+    <body>
+
+        <form method="post">
+            <fieldset>
+                <legend>Subscription Status</legend>
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name"><br>
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name"><br>
+                <label for="subscribe">Subscribe?</label>
+                <input type="checkbox" id="subscribe" name="subscribe"><br>
+                <input type="submit">
+            </fieldset>
+        </form>
+
+        {{if .}}
+            <h3>First Name: {{.Firstname}}</h3>
+            <h3>Last Name:  {{.Lastname}}</h3>
+            <h3>Subscribed: {{.Subscribed}}</h3>
+        {{end}}
+    </body>
+</html>

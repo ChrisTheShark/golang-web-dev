@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{if .Firstname}}
+            <title>Welcome!</title>
+        {{else}}
+            <title>Sign Up!</title>
+        {{end}}
+    </head>
+    <body>
+        {{if .Firstname}}
+            <h3>Welcome back {{.Firstname}}, your logged in as {{.Username}}.</h3>
+        {{else}}
+            <fieldset>
+                <legend>Register</legend>
+                <form action="/register" method="POST">
+                    <label for="user_name">Username:</label>
+                    <input type="text" id="user_name" name="user_name"><br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"><br>
+                    
+                    <label for="first_name">Firstname:</label>
+                    <input type="text" id="first_name" name="first_name"><br>
+                    
+                    <label for="last_name">Lastname:</label>
+                    <input type="text" id="last_name" name="last_name"><br>
+                    
+                    <input type="submit">
+                </form>
+            </fieldset>
+        {{end}}
+    </body>
+</html
